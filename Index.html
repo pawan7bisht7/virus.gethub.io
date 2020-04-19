@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Go Corona</title>
+	
+	<style type="text/css">
+
+html{
+	scroll-behavior: smooth;
+}
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Muli', sans-serif; }
+
+.row{
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+
+.nav_style{
+	background-color: #a29bfe!important;
+}
+
+.nav_style a{
+	color: white;
+}
+
+
+/*////////////// main header \\\\\\\\\\\\\\\*/
+
+.nav-link:hover{
+	transition: all 0.4s linear;
+	transform: scale(1.1);
+	box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+
+.main_header{
+	height: 450px;
+	width: 100%;
+}
+
+.rightside h1{
+	font-size: 3rem;
+}
+
+.corona_rot img{
+	animation: gocorona 4s linear infinite;
+}
+
+@keyframes gocorona{
+	0% { transform: rotate(0); }
+	100% { transform: rotate(360deg); }
+}
+
+.leftside img{ animation: heartbeat 5s linear infinite; }
+
+@keyframes heartbeat{
+	0%
+	{
+		transform: scale( .75 ) ;
+	}
+	20%
+	{
+		transform: scale( 1 ) ;
+	}
+	40%
+	{
+		transform: scale( .75 ) ;
+	}
+	60%
+	{
+		transform: scale( 1 ) ;
+	}
+	80%
+	{
+		transform: scale( .75 ) ;
+	}
+	100%
+	{
+		transform: scale( .75 ) ;
+	}
+}
+
+/******************minister image***********************/
+
+.img_effect .row .img-responsive:hover{
+	transition: all 0.5s linear;
+	transform: scale(1.12);
+	box-shadow: 0 0 20px rgba(0,0,0,.1);
+
+}
+
+
+/************* corana update **************/
+
+.corona_update{
+	margin: 0 0 30px 0;
+	 margin-top: 2.5rem;
+}   
+
+
+.corona_update h1{
+	font-size: 2.5rem; 
+	text-align: center;
+}
+
+/*************about section*****************/
+
+.sub_section{
+	background-color: #fbfaf8;
+}
+
+
+/*----------footer-------------*/
+
+.footer-bottom {
+	background: #343a40;
+	color: white;
+	height: 150px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	padding-top: 20px;
+}
+
+.centerdiv{
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+.centerdiv a{
+	height: 50px;
+	width: 50px;
+	background-color: #00A8FF;
+	border-radius: 60px;
+	text-align: center;
+	margin: 5px;
+	line-height: 60px;
+	transition: all 0.1s linear;
+}
+
+.fa-facebook{
+	color: #343a40;
+}
+
+.fa-instagram{
+	color: #343a40;
+}
+
+.fa-twitter{
+	color: #343a40;
+}
+
+.fa-youtube{
+	color: #343a40;
+}
+
+.fa-linkedin{
+	color: #343a40;
+}
+
+
+
+.centerdiv a:hover{
+	transform: scale(1.2);
+}
+
+/***************top scroll*************/
+
+#myBtn {
+	position: fixed; /*Fixed & sticky position*/
+	bottom: 30px;  /*Place the Button at the bottom of the page*/
+	right: 40px;  /*Place the buttom 30px from the right*/
+	z-index: 99;  /*make sure it does not overlap*/
+	border: none;
+	outline: none;
+	background-color: #00A8FF;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#myBtn:hover {
+	background: #606060;	/* Add a dark-gray background or hover*/
+}
+
+/*******responsive*********/
+
+@media(max-width:768px){
+	.main_header{ height: 700px; text-align: center; }
+
+	.main_header h1{
+		text-align: center;
+		padding: 0;
+		width: 100%;
+		font-size: 30px;
+
+	}
+	.count_style{
+		display: inline!important;
+	}
+	.count_style p{
+		text-align: center;
+	}
+	.count_style h1{
+		text-align: center;
+	}
+
+}
+
+.about_respons{
+	padding-top: 40px;
+	transition: all 0.3s linear;
+}
+
+.about_respons:hover{
+	transform: scale(1.02);
+	box-shadow: 0 0 40px rgba(0,0,0,.5);
+}
+
+.count:hover{
+	transition: all 0.2s linear;
+	transform: scale(1.4);
+	box-shadow: 0 0 0 rgba(0,0,0,1);
+}
+	
+	</style>
+</head>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"  integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"  integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+<nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#"><b>COVID - 19</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutid">about</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#sympid">symptoms</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#preventid">prevention</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#contectid">contact</a>
+      </li>
+    </ul>
+   </div>
+
+</nav>
+
+<div class="main_header">
+	<div class="row w-100 h-100">
+		<div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+			<div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+				<img src="image/eksath.png" width="300" height="300" class="img-fluid">
+			</div>
+		</div>
+
+		<div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+			<div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+
+          <div class="col-lg-12 col-md-12 col-12">
+        <figure class="figure text-center">
+        <img src="Image/nocorona.jpg" class="img-fluit"  width="110" height="100">
+        <img src="Image/nocorona.png" class="img-fluit"  width="350" height="200">
+        <figcaption><h1>Let's Stay Safe & Fight Together Against Cor<span class="corona_rot"> <img src="Image/p18.png" width="100" height="100">
+        </span>na Virus</h1></figcaption>
+        </figure>
+      </div>
+
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-----------Image of cobinate--------->
+
+ <div class="container sub_section img_effect">
+    <div class="row w-100 h-100">
+      
+      <div class="col-lg-4 col-md-4 col-12 mt-5 img-responsive">      
+        <div class="text-center">
+        <img src="Image/modi2.png" class="img-fluit"  width="170" height="170">
+        <div><h4>Shri Narendra Modi</h4>
+          <p style="color: #6c757d;"><i>Prime Minister of India</i></p>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5 img-responsive">          
+        <div class="text-center">
+        <img src="Image/Screenshot.png" class="img-fluit"  width="170" height="170">
+        <div><h4>Dr. Harsh Vardhan</h4>
+          <p style="color: #6c757d;"><i>Ministry of health and Family Welfare</i></p>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5 img-responsive">          
+        <div class="text-center">
+        <img src="Image/Screenshots.png" class="img-fluit"  width="170" height="170">
+        <div><h4>Shri Ashwini Kumar</h4>
+          <p style="color: #6c757d;"><i>State Ministry of Health and Family Welfare</i></p>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      
+
+
+
+<!--***************** corona latest updates ******************-->
+
+<section class="corona_update">
+  <div class="pb-5 pt-5">
+    <h1 class="text-capitalize text-center">COVID-19  updates</h1>
+  </div>
+
+  <div class="d-flex justify-content-around align-items-center count_style">
+    <div>
+      <h1 class="count" style="color: #00A8FF">834,030</h1>
+      <p>Passenger Screened at Airpost</p>
+    </div>
+
+    <div>
+      <h1 class="count" style="color: orange;">3784</h1>
+      <p>Active COVID_19 Cases</p>
+    </div>
+
+    <div>
+      <h1 class="count" style="color: green;">375</h1>
+      <p>Cured/Discharged Cases</p>
+    </div>
+
+    <div>
+      <h1 class="count" style="color: red;">64</h1>
+      <p>Death Cases</p>
+    </div>
+  </div>
+</section>
+
+
+<!------------about section---------->
+
+<div class="container-fluid sub_section pt-5 pb-5" id="aboutid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1>About  COVID-19</h1>
+  </div>
+
+  <div class="row pt-4">
+      <div class="col-lg-5 col-md-5 col-10 ml-5 about_respons">
+        <img src="Image/vr.jpg" class="img-responsive img-thumbnail" width="700" height="300">  
+
+        <!-------------Download PDG------------>
+
+<div class="text-center">
+  <a href="coronafile.pdf" target="_blank"><i>Download PDF About Corona</i> </a>
+</div>
+
+  </div>
+
+
+    <div class="col-lg-5 col-md-5 col-10 ml-5">
+      <h2 class="text-capitalize pb-4 pt-4">what is corona virus (COVID-19) ?</h2>
+      <p><i>A coronavirus is a type of common virus that can infect your nose, sinuses, or upper throat. They can spread much like cold viruses. Almost everyone gets a coronavirus infection at least once in their life, most likely as a young child.</p>
+      <p>Most coronaviruses are not dangerous, but some are. Those that cause Middle East respiratory syndrome (MERS) or severe acute respiratory syndrome (SARS ) can be deadly.</i></p>
+       <div class="embed-responsive embed-responsive-16by9">
+        <iframe  class="embed-responsive-item" width="100" src="image/corona.mp4" frameborder="0" allowfullscreen ></iframe>
+        </div>
+    
+      </div>
+  </div>
+</div>
+
+
+<!---------corona symptoms---------->
+
+<div class="container-fluid pt-5 pb-5" id="sympid">
+  <div class="section_header text-center mb-4 mt-4">
+    <h1>Coronavirus Symptoms</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+      
+        <figure class="text-center">
+        <img src="Image/cold.png" class="img-fluit"  width="150" height="150">
+        <figcaption>Cold</figcaption>
+        </figure>
+      </div>
+      
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          
+        <figure class="text-center">
+        <img src="Image/cough.png" class="img-fluit"  width="150" height="150">
+        <figcaption>Dry Cough</figcaption>
+        </figure>
+      </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+        <img src="Image/fever.png" class="img-fluit"  width="150" height="150">
+        <figcaption>Fever</figcaption>
+        </figure>
+      </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+        <img src="Image/head.jpg" class="img-fluit"  width="150" height="150">
+        <figcaption>Headache</figcaption>
+        </figure>
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+        <img src="Image/pain.png" class="img-fluit"  width="150" height="150">
+        <figcaption>Shortness of breath</figcaption>
+        </figure>
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+        <img src="Image/weak.png" class="img-fluit"  width="150" height="150">
+        <figcaption>Weakness</figcaption>
+        </figure>
+      </div>      
+
+    </div>
+  </div>
+  </div>
+
+
+<!---------prevention against coronavirus---------->
+
+<div class="container-fluid  sub_section pt-5 pb-5" id="preventid">
+  <div class="section_header text-center mb-4 mt-4">
+    <h1>9 Steps Prevention Against Coronavirus</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/hand.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Wash your hands regularly for 20 second with soap and water or alcohol-based hand rub</p>
+          </div>
+        </div>        
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/facemask.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Cover your nose and mouth with a disposable tissue or fixed elbow when you cough or sneeze</p>
+          </div>
+        </div>        
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/info.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Stay informed by wathing news & follow the recommended practices</p>
+          </div>
+        </div>        
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/stayhome.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Stay home and self-isolate form others in the household if you feel unwell</p>
+          </div>
+        </div>        
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/Fever.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>If you have cough and difficulty breathing seek medical care early</p>
+          </div>
+        </div>        
+      </div>
+
+       <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/contect.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Avoid close contact(1 meter or 3 feet)with people who are unwell</p>
+          </div>
+        </div>        
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/covermouth.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Cover your nose and mouth with tissue or elbow when sheezing</p>
+          </div>
+        </div>        
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/travelling.jpg" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Avoid travelling to affected areas unless necessary</p>
+          </div>
+        </div>        
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure>
+             <img src="Image/clean.png" class="img-fluit"  width="90" height="90">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+           <p>Keep objects and surfaces clean</p>
+          </div>
+        </div>        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!---------Contect Us As Soon As Posible---------->
+
+<div class="container-fluid pt-5 pb-5" id="contectid">
+  <div class="section_header text-center mb-4 mt-4">
+    <h1>Contact Us</h1>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-12">
+      
+<form action="" method="POST">
+
+   <div class="form-group">
+    <label>Username :</label>
+    <input type="text" class="form-control" name="username" placeholder="name" autocomplete="off">
+  </div>
+
+  <div class="form-group">
+    <label>Email :</label>
+    <input type="email" class="form-control" name="email" placeholder="name@example.com" required autocomplete="off">
+  </div>
+
+    <div class="form-group">
+    <label>Mobile :</label>
+    <input type="number" maxlength="13" class="form-control" name="mobile" placeholder="mobile" autocomplete="off" required>
+  </div>
+ 
+
+  <div class="form-group">
+    <label>Select Symptoms :</label><br>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customcheckbox1" name="coronasym[]" value="cold">
+      <label class="custom-control-label" for="customcheckbox1">Cold</label>      
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customcheckbox2" name="coronasym[]" value="fever">
+      <label class="custom-control-label" for="customcheckbox2">fever</label>      
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customcheckbox3" name="coronasym[]" value="difficulty in breath">
+      <label class="custom-control-label" for="customcheckbox3">difficulty in breath</label>      
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customcheckbox4" name="coronasym[]" value="feeling weak">
+      <label class="custom-control-label" for="customcheckbox4">feeling weak</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+   <label for="exampleFromControlTextarea1">Example textarea</label>
+   <textarea class="form-control" id="exampleFromControlTextarea1" rows="3" name="msg"></textarea>
+  </div>
+
+ <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+
+</form>
+
+    </div>
+  </div>
+</div>
+
+</div> 
+
+
+
+<!-----------top cursor---------->
+
+<div class="container scrolltop float-right pr-5">
+  <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"> </i>
+</div>
+
+
+<!-----------footer--------------->
+
+
+
+<footer class="container-fluid">    
+  <div class="footer-bottom">
+<div class="centerdiv">
+  <a href="https://www.facebook.com/WHO/?ref=br_rs" target="_blank">
+    <i class="fa fa-2x fa-facebook"></i>
+  </a>
+
+  <a href="#">
+    <i class="fa fa-2x fa-instagram"></i>
+  </a>
+
+  <a href="#">
+    <i class="fa fa-2x fa-twitter"></i>
+  </a>
+
+  <a href="#">
+    <i class="fa fa-2x fa-youtube"></i>
+  </a>
+
+  <a href="#">
+    <i class="fa fa-2x fa-linkedin"></i>
+  </a>
+</div>
+
+
+    &copy;coronavirus.com | designed by @<i><u>Pawan Bisht............</u><i>
+  </div>
+</footer>
+
+<script type="text/javascript">
+
+  $('.count').counterUp({
+    delay:20,
+    time:2500
+  })
+
+  mybutton=document.getElementById("myBtn");
+  //when the user scrolls down 20px from 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      mybutton.style.display = "block";
+    } else{
+      mybutton.style.display = "none";
+    }
+  }
+  //When  the user clicks on the button, scroll tothe top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;      //For Safari
+    document.documentElement.scrollTop = 0;   //For Chrome, Firefor, IE
+      }
+
+</script>
+ 
+
+</body>
+
+</html>
+
+<?php
+
+include 'dbcon.php';
+
+  if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $symp = $_POST['coronasym'];
+    $msg = $_POST['msg'];
+
+    $chk = "";
+
+    foreach($symp as $chk1) {
+      $chk .= $chk1."," ;
+    }
+
+    $insertquery = " insert into coronacase(username, email, mobile, symptoms, message) values('$username', '$email', '$mobile', '$chk', '$msg') ";
+
+    $query = mysqli_query($con, $insertquery);
+
+
+if($query){
+  ?>
+  <script>
+    alert("inserted successful");
+  </script>
+  <?php
+}else{
+  ?>
+  <script>
+    alert("No inserted");
+  </script>
+  <?php
+      }
+  }
+
+?>
